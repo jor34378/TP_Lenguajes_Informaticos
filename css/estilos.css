@@ -1,0 +1,66 @@
+/*Estlos index.html*/
+
+html {
+    font-size: 16px;
+}
+body {
+    font-family:"Roboto", sans-serif;
+    color: #1A2B4A;
+    background-color:#F7F9FA;
+    padding: 1.5rem;
+    
+}
+
+h1 {
+    color: #028090;
+}
+.enlace-salto{
+
+    color: #1A2B4A;
+    font-size: 0.9rem;
+}
+h2,h3 {
+    color: #028090;
+}
+header h2 {
+    color: #9798a5; 
+}
+.consejos { 
+    color: #9798a5;
+}
+nav a {
+    text-decoration: none;
+    color: #028090;
+    padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+    color: #023490;
+}
+
+#PieDePagina {
+    background-color: #333333; 
+    color: #ffffff;            
+    padding: 1.5rem;
+}
+#PieDePagina a {
+    color: #ffffff;
+}
+strong {
+    font-style: italic;
+}
+
+.fondo {
+    background-color: #f0f4f8;
+}
+
+a {
+    text-decoration: none;
+    color: #028090;
+    font-weight: bold;
+}
+
+a:hover{
+    color: #E8611A;
+    text-decoration: underline;
+}
