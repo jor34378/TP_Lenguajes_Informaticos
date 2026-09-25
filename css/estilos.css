@@ -6,9 +6,9 @@
     --color-fondo:#F7F9FA;
     --color-acento:#E8611A;
     --color-footer:#333333;
-    --color-header:#f0f4f8;
-    --color-text-footer:#ffffff;
-    --color-aside:#e6f4f8;
+    --color-header-aside:#f0f4f8;
+    --color-text-footer-nav:#ffffff;
+    
    }
 /*Estilos generales*/
 * {
@@ -50,17 +50,18 @@ h3 {
 }
 /*header y barra de navegacion*/
 header {
-    background-color: var(--color-header);
+    background-color: var(--color-header-aside);
     padding:2rem 1rem;
     text-align: center;
+    margin-bottom: 1rem;
 }
 nav{
     display: flex;
-    justify-content: space-evenly; /* O center para agruparlos al medio */
+    justify-content: space-evenly; 
     align-items: center;
-    background-color: var(--color-secundario); /* O usa un degradado */
+    background-color: var(--color-secundario); 
     padding: 0.8rem 1.5rem;
-    border-radius: 8px;           /* Redondea los bordes de la barra */
+    border-radius: 8px;           
     margin-top: 1.5rem;
     margin-bottom: 1rem;
 }
@@ -71,6 +72,11 @@ nav a {
     padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: background-color 0.3s;
+}
+nav a:hover {
+    background-color: var(--color-primario);
+    color: var(--color-text-footer-nav);
+    text-decoration: none;
 }
 /*Enlaces generales */
 a {
@@ -85,7 +91,7 @@ a:hover{
 /*En lace de salto a propuestas*/
 .enlace-salto {
     display: inline-block;
-    background-color:var(--color-aside);
+    background-color:var(--color-header-aside);
     color: var(--color-primario);
     padding: 0.4rem 0.8rem;
     border-radius: 20px;
@@ -107,25 +113,25 @@ a:hover{
 /*footer y pie de pagina*/
 footer {
     background-color: var(--color-footer); 
-    color: var(--color-text-footer);            
+    color: var(--color-text-footer-nav);            
     padding: 1.5rem;
 }
 #PieDePagina a {
-    color: var(--color-text-footer);
+    color: var(--color-text-footer-nav);
 }
 
-/* El padre de los 3 article */
+/* flexbox para los articulos (el padre) */
 #resumen {
     display: flex;
     flex-direction: row;     /* Los ubica en fila de izquierda a derecha */
     flex-wrap: wrap;        /* Si la pantalla chica pasan abajo */
-    justify-content: center; /* Los centra horizontalmente */
+    justify-content: center; 
     align-items: stretch;   /* Hace que todos los articles tengan el mismo alto */
-    gap: 1.5rem;            /* Espacio uniforme entre los tres */
+    gap: 1.5rem;            
     margin-top: 1.5rem;
   }
   
-/* estilo por article */
+/* flexbox para los articulos (hijos) */
 #resumen article {
     flex: 1 1 300px;        /* Crecen en proporciones iguales, mínimo 300px de ancho */
     background-color: #ffffff;
@@ -135,7 +141,7 @@ footer {
     
   }
 
-#resumen article h3,p {
+#resumen article h3 {
     margin-bottom: 1rem; /*para que el titulo respire*/
   }
   /* imagen de article */
@@ -148,7 +154,7 @@ footer {
  
 /*contenido aside*/
 #consejos {
-    background-color:var(--color-aside);            
+    background-color:var(--color-header-aside);            
     border-left: 5px solid var(--color-primario); 
     padding: 1.2rem 1.5rem;               
     border-radius: 0 8px 8px 0;           
