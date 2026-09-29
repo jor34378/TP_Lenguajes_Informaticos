@@ -9,7 +9,6 @@
     --color-primario: #028090;
     --color-secundario:#1A2B4A;
     --color-fondo:#F7F9FA;
-    --color-acento:#E8611A;
     --color-footer:#333333;
     --color-header-aside:#f0f4f8;
     --color-text-footer-nav:#ffffff;
@@ -88,10 +87,16 @@ a {
     text-decoration: none;
     color: var(--color-primario);
     font-weight: bold;
+    
 }
 a:hover{
-    color: var(--color-acento);
-    text-decoration: underline;
+    background-color: var(--color-secundario);
+    color: var(--color-text-footer-nav);
+    text-decoration: none;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    
 }
 
 /*En lace de salto a propuestas*/
@@ -99,8 +104,8 @@ a:hover{
     display: inline-block;
     background-color:var(--color-header-aside);
     color: var(--color-primario);
-    padding: 0.4rem 0.8rem;
-    border-radius: 20px;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
     margin-top: 1rem;
   }
 /*imagen de portada*/
