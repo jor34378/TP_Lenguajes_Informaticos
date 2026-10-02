@@ -59,6 +59,23 @@ header {
     text-align: center;
     margin-bottom: 1rem;
 }
+
+/* Hero: seccion principal destacada al tope de la pagina */
+.hero {
+    padding: 3rem 1.5rem;
+}
+
+.hero h1 {
+    margin-bottom: 0.5rem;
+}
+
+.hero h2 {
+    color: var(--color-secundario);
+    font-weight: normal;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 1rem auto;
+}
 nav{
     display: flex;
     justify-content: space-evenly; 
