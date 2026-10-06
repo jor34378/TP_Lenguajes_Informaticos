@@ -268,7 +268,7 @@ footer {
     border-left: 4px solid var(--color-primario);
     padding: 1.5rem;
     border-radius: 6px;
-    margin: 0 auto;
+    margin: 0 auto 3rem auto;
     text-align: center;
 }
 
