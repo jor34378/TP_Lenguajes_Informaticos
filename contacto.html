@@ -3,31 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Turismo y Oficinas / Contacto - Mar del Plata</title>
+    <title>Contacto - Turismo Mar del Plata</title>
     <meta name="description" content="Página de contacto de la oficina de Turismo de Mar del Plata.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <header>
+    <header id="encabezado" class="hero">
         <h1>Contacto</h1>
-        <p><strong>¿Tienes alguna pregunta? Estamos aquí para ayudarte.</strong></p>
-        <nav aria-label="Navegación principal">
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="noticias.html">Noticias</a></li>
-            <li><a href="ciudad.html">Ciudad</a></li>
-            <li><a href="lugares.html">Lugares</a></li>
-            <li><a href="gastronomia.html">Gastronomía</a></li>
-        </ul>
+        <p>¿Tenés alguna pregunta? Estamos aca para ayudarte</p>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="ciudad.html">Ciudad</a>
+            <a href="lugares.html">Lugares</a>
+            <a href="noticias.html">Noticias</a>
+            <a href="contacto.html">Contacto</a>
         </nav>
     </header>
     <main>
         <section id="oficinas">
             <h2>Encontrá nuestras oficinas de turismo</h2>
             <article>
+                <div class="informacion">
                 <h2>Información</h2>
-                <p><strong>Días de atención:</strong> Lunes a Sábados</p>
-                <p><strong>Horarios:</strong> 9:00 a 18:00</p>
-                <p><strong>Dirección:</strong> Av. Madrid 91218, Mar del Plata, Buenos Aires, Argentina</p>
+                <p><strong>Días de atención:</strong> Lunes a Sábados.</p>
+                <p><strong>Horarios:</strong> 9:00 a 18:00.</p>
+                <p><strong>Dirección:</strong> Av. Madrid 91218, Mar del Plata, Buenos Aires, Argentina.</p>
+                </div>
             </article>
             <article>
                 <h3>Ubicación en el mapa</h3>
@@ -38,7 +42,30 @@
         <section id="sugerencias">
             <h3>Dejanos tus sugerencias</h3>
             <!-- Formulario de sugerencias "hacerlo a futuro" un link o una caja para que ingresen texto no se como se hace-->
-            <p>"En el siguiente link al formulario de sugerencias"</p>
+             <div class="formulario-container">
+                <form action="mailto:" method="post" enctype="text/plain">
+
+                    <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                    </div>
+
+                    <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required placeholder="Tu email">
+                    </div>
+                    <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" requiredplaceholder="Escribinos tus sugerencias"></textarea>
+                    </div>
+                    
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="privacidad" required>
+                        <label for="privacidad">He leido y acepto la <a href="#">política de privacidad</a></label>
+                    
+                    <input type="submit" value="Enviar" class="btn-submit">
+                </form>
+             </div>
         </section>
     </main>
     <footer id="contacto">
