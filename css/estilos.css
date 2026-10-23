@@ -7,6 +7,9 @@
     --color-footer:#333333;
     --color-header-aside:#f0f4f8;
     --color-text-footer-nav:#ffffff;
+    --color-borde: #cbd5e1;
+    --color-borde-suave: #e2e8f0;
+    --color-borde-claro: #e0e0e0;
     
    }
 /*Estilos generales*/
@@ -16,12 +19,13 @@
     padding: 0;
    }
 body {
-    font-family:var(--fuente), sans-serif;
+
+    font-family:var(--fuente), sans-serif !important;
     color: var(--color-secundario);
     background-color:var(--color-fondo);
     font-size: 16px;
     line-height: 1.6;
-    max-width: 1100px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 0 1rem;
     
@@ -110,8 +114,25 @@ a:hover{
     transition: background-color 0.3s;
     
 }
+/* Sobrescribo el botón de Bootstrap */
+
+.btn-primary {
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+}
+.btn-primary:hover {
+    background-color: var(--color-secundario);
+    border-color: var(--color-secundario);
+}
+
+.card {
+    border: 1px solid var(--color-borde-claro);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--color-footer); 
+}
 
 /*En lace de salto a propuestas*/
+
 .enlace-salto {
     display: inline-block;
     background-color:var(--color-header-aside);
@@ -120,7 +141,9 @@ a:hover{
     border-radius: 4px;
     margin-top: 1rem;
   }
+
 /*imagen de portada*/
+
 .banner {
     display: flex;
     justify-content: center;
@@ -133,7 +156,9 @@ a:hover{
     margin-bottom: 2rem;
     
 }
+
 /*footer y pie de pagina*/
+
 footer {
     background-color: var(--color-footer); 
     color: var(--color-text-footer-nav);            
@@ -144,27 +169,30 @@ footer {
 }
 
 /* flexbox para los articulos (el padre) */
+
 #resumen {
     display: flex;
-    flex-direction: row;     /* Los ubica en fila de izquierda a derecha */
-    flex-wrap: wrap;        /* Si la pantalla chica pasan abajo */
+    flex-direction: row;     
+    flex-wrap: wrap;        
     justify-content: center; 
     align-items: stretch;   /* Hace que todos los articles tengan el mismo alto */
     gap: 1.5rem;            
     margin-top: 1.5rem;
   }
-  
+ 
+
 /* flexbox para los articulos (hijos) */
+
 #resumen article {
     flex: 1 1 300px;        /* Crecen en proporciones iguales, mínimo 300px de ancho */
-    background-color: #ffffff;
+    background-color: var(--color-text-footer-nav);
     padding: 1.5rem;
     border-radius: 8px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--color-borde-claro);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+    box-shadow: 0 4px 6px var(--color-footer);
   }
 
 
@@ -175,32 +203,182 @@ footer {
   }
 
 #resumen article h3 {
-    margin-bottom: 1rem; /*para que el titulo respire*/
+    margin-bottom: 1rem; 
   }
+
   /* imagen de article */
+
 #resumen article img {
     max-width: 100%;
-    height: auto;
+    height: 150px;
     border-radius: 4px;
     margin-top: auto;
   }
  
-/*contenido aside*/
+/*contenido aside soobreescribiendo bootstrap*/
+
 #consejos {
     background-color:var(--color-header-aside);            
     border-left: 5px solid var(--color-primario); 
-    padding: 1.2rem 1.5rem;               
-    border-radius: 0 8px 8px 0;           
-    margin-top: 2.5rem;                   
-    margin-bottom: 3.5rem;              
+                 
   }
+
+  .badge.bg-primary {
+    background-color: var(--color-primario) !important;
+    font-size: 0.8rem;
+}
+.badge {
+    vertical-align: middle;
+    margin-left: 8px;
+    font-size: 0.75rem;
+}
+
+  /*grid contenido principal */
+   
+.layout-principal {
+    display: grid;
+    /* Columna 1 para el menú (220px), Columna 2 para todo el resto (1fr) */
+    grid-template-columns: minmax(150px, 250px) 1fr; 
+    gap: 20px;
+    max-width: 1300px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* Estilos del Menú Lateral */
+.menu-lateral {
+    background-color: var(--color-header-aside);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--color-borde-suave);
+    align-self: start; /* Para que no se estire raro hacia abajo */
+    position: sticky;
+    top: 20px; /* Queda fijo arriba al hacer scroll */
+}
+
+.menu-lateral h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    color: var(--color-footer);
+    border-bottom: 2px solid var(--color-primario);
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+}
+
+.menu-lateral ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-lateral li {
+    margin-top: 2px;
+    margin-bottom: 12px;
+}
+
+.menu-lateral a {
+    text-decoration: none;
+    color: var(--color-secundario);
+    font-weight: bold;
+    display: block;
+    transition: color 0.2s;
+}
+.menu-lateral a:hover {
+    background-color: var(--color-primario);
+    color: var(--color-text-footer-nav);
+}
+
+
+
+/*==================== grid y estilos gastronomia ==========================*/
+
+
+
+.seccion-gastronomia {
+    padding: 20px 0;
+}
+
+/* Contenedor general que pone los dos bloques uno al lado del otro */
+.contenedor-bloques {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas principales */
+    gap: 30px; /* Espacio bien separado entre el bloque 1 y el bloque 2 */
+}
+
+/* Estilo de cada bloque contenedor individual */
+
+.bloque-local {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre la tarjeta grande de arriba y los platos de abajo */
+    background: var(--color-text-footer-nav);
+    border: 1px solid var(--color-borde-claro);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px var(--color-footer);
+    justify-content: space-between;
+}
+
+/* Tarjeta principal (arriba de cada bloque) */
+.item-principal {
+    flex: 1;
+    background: var(--color-text-footer-nav);
+    border: 1px solid var(--color-borde-claro);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.item-principal img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.info-principal {
+    padding: 15px;
+}
+
+/* Contenedor horizontal para las dos fotos chicas de abajo */
+.platos-inferiores {
+    display: flex;
+    gap: 15px; /* Espacio entre el plato izquierdo y el derecho */
+}
+
+/* Tarjetas chicas individuales */
+.item-chico {
+    flex: 1; /* Hace que ambas tarjetas chicas compartan exactamente el 50% del ancho */
+    background: var(--color-text-footer-nav);
+    border: 1px solid var(--color-borde-claro);
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.item-chico img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+
+.item-chico h4 {
+    font-size: 1rem;
+    margin: 0;
+}
+
 
 /* ===================================== */
 /* ===== Estilos noticias.html - Ema ===== */
 /* ===================================== */
 
 #introduccion {
-    max-width: 800px;
+    max-width: 1200px;/*cambie para probar */
     margin: 0 auto 3rem auto;
 }
 
@@ -285,7 +463,7 @@ footer {
     background-color: #f8fafc; /* fondo claro y suave */
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px var(--color-footer);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333333;
 }

@@ -3,18 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
+
     <title>Inicio - Turismo Mar Del Plata</title>
+    
     <meta name="description" content="Página de inicio para hacer turismo en Mar Del Plata">
+    
+    <!-- ================= FUENTE ================= -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- ================= LINK BOOTSTRAP ================= -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <!-- ================= LINK ESTILOS ================= -->
     <link rel="stylesheet" href="css/estilos.css">
+
 </head>
 <body>
+
+    <!-- ================= ENCABEZADO Y NAV PRINCIPAL ================= -->
+
+
     <header id="encabezado" class="hero">   
 <h1>Planificá tus próximas vacaciones en Mar Del Plata</h1>
 <h2>Mirá todos los planes para hacer en la feliz en un solo lugar.</h2>
-<nav>
+<nav aria-label="Menú principal">
     <a href="index.html">Inicio</a>
     <a href="ciudad.html">Ciudad</a>
     <a href="lugares.html">Lugares</a>
@@ -22,55 +37,215 @@
     <a href="contacto.html">Contacto</a>
 </nav>
 </header>
-<main>
-    <section id="introduccion">
-        <h2>Bienvenidos a Mar Del Plata</h2>
-        <p>Mar del plata es <strong>balneario</strong> más emblemático de Argentina. Elegido por millones de turistas año tras año, aquí podrás encontrar extensas <strong>playas</strong>, diversas propuestas culturales e infinidad de actividades al aire libre.</p>
-        <p>No te pierdas nuestras <a href="#titulo-resumen" class="enlace-salto"><em>propuestas</em></a></p>
-        <div class="banner">
-            <img src="https://picsum.photos/id/12/1400/400" alt="Panoramica de la playa">
-        </div>
-    </section>
-    <h2 id="titulo-resumen" >Los mas destacados</h2>
-    <section id="resumen">
-        <article>
-            <h3>Historia de la ciudad</h3>
-            <p>Mar del Plata, apodada "La Ciudad Feliz", evolucionó de un pequeño
-                establecimiento saladeril a convertirse en el principal balneario y
-                puerto pesquero de Argentina.<br><a href="ciudad.html">Conocé más de la feliz.</a></p>
-            
-                
-                <img src="https://picsum.photos/id/124/1400/500" alt="paseos en bote">
-        </article>
-        <article>
-            <h3>Actividades</h3>
-            <p>Conocé cuáles son las playas mas lindas, y que actividades ofrece cada una <a href="lugares.html">con un click.</a> </p>
-            <ul>
-                <li>Caminatas por la costanera</li>
-                <li>Clases de surf</li>
-                <li>Paseos por el bosque</li>
-            </ul>
-            <img src="https://picsum.photos/id/124/1400/500" alt="paseos en bote">
-        </article>
-        <article>
-            <h3>Cultural</h3>
-            
-            <p>Accede a descuentos y entradas gratuitas de la siguiente manera</p> 
-            <ol>
-                <li>Ingresa a <a href="contacto.html">acá.</a></li>
-                <li>Completá el formulario</li> <!--No existe-->
-                <li>Elegí el evento que este disponible</li>
-                <li>Chequea tu email para ver los tickets</li>
-            </ol>
-            <img src="https://picsum.photos/id/124/1400/500" alt="paseos en bote">
-        </article>
-    </section>
-    <aside id="consejos">
-        <h2>Consejos útiles</h2>
-        <p>Revisa el <a href="https://www.meteored.com.ar/tiempo-en_Mar+del+Plata-America+Sur-Argentina-Provincia+de+Buenos+Aires-SAZM-1-16931.html" target="_blank" rel="noopener noreferrer">clima</a> para organizar tu día y aprovechar todas las mejores propuestas</p>
-    </aside>
 
+<main class="layout-principal">
+
+    <!-- ================= NAV LATERAL ================= -->
+
+
+        <aside class="menu-lateral" aria-label="Menú de navegación interna">
+            <h3>Información de Intéres</h3>
+            <ul>
+                <li><a href="#encabezado">Menú principal</a></li>
+                <li><a href="#introduccion">Bienvenidos</a></li>
+                <li><a href="#titulo-resumen">Destacados</a></li>
+                <li><a href="#gastronomia">Gastronomía</a></li>
+                <li><a href="#alojamientos">Alojamientos</a></li>
+                <li><a href="#consejos">Consejos Útiles</a></li>
+            </ul>
+        </aside>
+
+     <!-- ================= CONTENIDO INTRO ================= -->   
+
+    <div class="contenido-principal">
+        <section id="introduccion">
+            <h2>Bienvenidos a Mar Del Plata</h2>
+           
+            <p>Mar del plata es <strong>balneario</strong> más emblemático de Argentina. Elegido por millones de turistas año tras año, aquí podrás encontrar extensas <strong>playas</strong>, diversas propuestas culturales e infinidad de actividades al aire libre.</p>
+            
+           
+
+            <p>No te pierdas nuestras  <a href="#titulo-resumen"  class="enlace-salto"><em>propuestas</em></a></p>
+            <div class="banner">
+                <img src="https://picsum.photos/id/12/1400/400" alt="Panoramica de la playa">
+            </div>
+        </section>
+
+        <!-- ============================== TARJETAS CON HISTORIA ACTIVIDADES CULTURA  =============================== -->
+
+
+        
+        <section >
+            <h2 id="titulo-resumen" >Los mas destacados</h2>
+         <!-- ============================== TARJETAS HISTORIA  =============================== -->
+            <div id="resumen">
+                <article>
+                    <h3>Historia de la ciudad</h3>
+                    <p>Mar del Plata, apodada "La Ciudad Feliz", evolucionó de un pequeño
+                        establecimiento saladeril a convertirse en el principal balneario y
+                        puerto pesquero de Argentina.<br><a href="ciudad.html">Conocé más de la feliz.</a></p>
+                    
+                        
+                        <img src="https://picsum.photos/id/120/1400/500" alt="paseos en bote">
+                </article>
+
+                
+            <!-- ============================== TARJETA ACTIVIDADES  =============================== -->
+                <article>
+                    <h3>Actividades</h3>
+                    <p>Conocé cuáles son las playas mas lindas, y que actividades ofrece cada una <a href="lugares.html">con un click.</a> </p>
+                    <ul>
+                        <li>Caminatas por la costanera</li>
+                        <li>Clases de surf</li>
+                        <li>Paseos por el bosque</li>
+                    </ul>
+                    <img src="https://picsum.photos/id/121/1400/500" alt="paseos en bote">
+                </article>
+
+                <!-- ============================== TARJETAS CULKTURA  =============================== -->
+
+                <article>
+                    <h3>Cultural</h3>
+                    
+                    <p>Accede a descuentos y entradas gratuitas de la siguiente manera</p> 
+                    <ol>
+                        <li>Ingresa a <a href="contacto.html">acá.</a></li>
+                        <li>Completá el formulario</li> <!--No existe-->
+                        <li>Elegí el evento que este disponible</li>
+                        <li>Chequea tu email para ver los tickets</li>
+                    </ol>
+                    <img src="https://picsum.photos/id/122/1400/500" alt="paseos en bote">
+                </article>
+            </div>
+        </section>
+
+         <!-- ==========================================  GASTRONOMIA ================================================== -->
+        <section id="gastronomia" class="seccion-gastronomia">
+
+                                        <!--==========  BADGE BOOTSTRAP ======== -->
+            <h2>Gastronomía Destacada<span class="badge bg-primary">¡Nuevo!</span></h2>
+            
+            <div class="contenedor-bloques">
+                
+                <!-- ============================ BLOQUE 1 GRANDE DEL LOCAL ============================ -->
+                <div class="bloque-local">
+                    
+                    <article class="item-principal">
+                        <img src="https://picsum.photos/id/130/1400/500" alt="Puerto de Marisco">
+                        <div class="info-principal">
+                            <h3>Puerto de Marisco</h3>
+                            <p>El clásico sabor marplatense con pescados frescos del día.</p>
+                        </div>
+                    </article>
+        
+                <!-- ============ BLOQUE CHICOS DE COMIDAS  ============ -->
+
+                    <div class="platos-inferiores">
+                        <article class="item-chico">
+                            <img src="https://picsum.photos/id/129/1400/500" alt="Cazuela de Mariscos">
+                            <h4>Cazuela de Mariscos</h4>
+                        </article>
+
+                        <article class="item-chico">
+                            <img src="https://picsum.photos/id/128/1400/500" alt="Rabas Crocantes">
+                            <h4>Rabas Crocantes</h4>
+                        </article>
+                    </div>
+                </div>
+        
+                <!-- ============================ BLOQUE 2 GRANDE DEL LOCAL  ============================ -->
+
+                <div class="bloque-local">
+                    
+                    <article class="item-principal">
+                        <img src="https://picsum.photos/id/127/1400/500" alt="Café de la Costa">
+                        <div class="info-principal">
+                            <h3>Café de la Costa</h3>
+                            <p>Especialidad en churros y desayunos frente al mar.</p>
+                        </div>
+                    </article>
+        
+                    <!-- ================= BLOQUE CHICOS DE COMIDAS  ================= -->
+
+                    <div class="platos-inferiores">
+                        <article class="item-chico">
+                            <img src="https://picsum.photos/id/126/1400/500" alt="Churros Rellenos">
+                            <h4>Churros Rellenos</h4>
+                        </article>
+                        <article class="item-chico">
+                            <img src="https://picsum.photos/id/125/1400/500" alt="Café Doble">
+                            <h4>Café Doble</h4>
+                        </article>
+                    </div>
+                </div>
+        
+            </div>
+        </section>
+
+        <!-- ================= ALOJAMIENTOS BOOTSTRAP ================= -->
+        
+<section id="alojamientos" class="my-5">
+    <h2>Alojamientos Recomendados <span class="badge bg-primary">¡Destacado!</span></h2>
+    
+    <div class="container px-0">
+        <div class="row g-4"> <!-- g-4 pone el espacio (gutter) obligatorio de Bootstrap -->
+            
+            <!-- ================= HOTEL 1 ================= -->
+            <div class="col-12 col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://picsum.photos/id/237/600/400" class="card-img-top" alt="Hotel Costa Galana">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Hotel Costa Galana</h5>
+                            <p class="card-text">Lujo y confort frente a Playa Grande, con servicios de spa y alta gastronomía.</p>
+                        </div>
+                        <a href="contacto.html" class="btn btn-primary mt-3">Consultar tarifas</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= HOTEL 2 ================= -->
+            <div class="col-12 col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://picsum.photos/id/28/600/400" class="card-img-top" alt="Hotel Provincial">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">NH Gran Hotel Provincial</h5>
+                            <p class="card-text">Un clásico histórico de Mar del Plata ubicado en pleno centro de la Rambla.</p>
+                        </div>
+                        <a href="contacto.html" class="btn btn-primary mt-3">Consultar tarifas</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= HOTEL 3 ================= -->
+            <div class="col-12 col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="https://picsum.photos/id/29/600/400" class="card-img-top" alt="Apart Hotel Mar del Plata">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="card-title">Apart Sol y Mar</h5>
+                            <p class="card-text">Ideales para familias, totalmente equipados a pocos metros de la costa.</p>
+                        </div>
+                        <a href="contacto.html" class="btn btn-primary mt-3">Consultar tarifas</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+        <!-- ================= BOOTSTRAPS PARA ALERTA  ================= --> 
+        <!-- ================= CONTENIDO ASIDE PARA CLIMA  ================= -->
+        <aside id="consejos" class="alert alert-info" role="alert">
+            <h2>Consejos útiles</h2>
+            <p>Revisa el <a href="https://www.meteored.com.ar/tiempo-en_Mar+del+Plata-America+Sur-Argentina-Provincia+de+Buenos+Aires-SAZM-1-16931.html" target="_blank" rel="noopener noreferrer">clima</a> para organizar tu día y aprovechar todas las mejores propuestas</p>
+        </aside>
+    </div>
 </main>
+
+        <!-- ================= FOOTER  ================= -->
+
 <footer id="PieDePagina">
     <p>&copy; 2026 Turismo Mar del Plata - Todos los derechos reservados.</p>
     <address>
