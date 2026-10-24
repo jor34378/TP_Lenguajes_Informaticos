@@ -103,16 +103,14 @@ a {
     text-decoration: none;
     color: var(--color-primario);
     font-weight: bold;
-    
+    transition: background-color 0.3s, color 0.3s;
 }
-a:hover{
+
+a:hover {
     background-color: var(--color-secundario);
     color: var(--color-text-footer-nav);
     text-decoration: none;
-    padding: 0.2rem 0.5rem;
     border-radius: 4px;
-    transition: background-color 0.3s;
-    
 }
 /* Sobrescribo el botón de Bootstrap */
 
@@ -378,7 +376,7 @@ footer {
 /* ===================================== */
 
 #introduccion {
-    max-width: 1200px;/*cambie para probar */
+    max-width: 1200px;
     margin: 0 auto 3rem auto;
 }
 
@@ -391,58 +389,30 @@ footer {
 }
 
 #listado {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto 3rem auto;
 }
 
-#listado article {
-    background-color: #ffffff;
-    border-left: 4px solid var(--color-primario);
-    border-radius: 0 8px 8px 0;
-    padding: 1.25rem 1.5rem;
-    margin-bottom: 1.2rem;
+#listado .card-img-top {
+    height: 200px;
+    object-fit: cover;
 }
 
-#listado article:last-of-type {
-    margin-bottom: 0;
+/* anula el margin-left global de .badge */
+#listado .badge {
+    margin-left: 0;
 }
 
-/* fecha + titulo en una misma fila */
-.noticia-encabezado {
-    display: flex;
-    align-items: baseline;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-bottom: 0.6rem;
-}
-
-#listado h3 {
-    margin: 0;
-}
-
-#listado time {
-    display: inline-block;
-    background-color: var(--color-header-aside);
-    color: var(--color-primario);
-    font-size: 0.8rem;
-    font-weight: bold;
-    padding: 0.2rem 0.8rem;
-    border-radius: 20px;
-    white-space: nowrap;
-}
-
-#listado article p {
+#listado .card-text {
     font-size: 1.05rem;
 }
 
+/* alert de Bootstrap con la paleta del sitio */
 #suscripcion {
     max-width: 800px;
-    background-color: var(--color-header-aside);
-    border-left: 4px solid var(--color-primario);
-    padding: 1.5rem;
-    border-radius: 6px;
     margin: 0 auto 3rem auto;
-    text-align: center;
+    background-color: var(--color-header-aside);
+    border-left: 5px solid var(--color-primario);
 }
 
 #suscripcion h2 {
@@ -490,6 +460,3 @@ footer {
     box-sizing: border-box; /* evita que se desborde */
     transition: border-color 0.2s ease-in-out;
 }
-
-
-

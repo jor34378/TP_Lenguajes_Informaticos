@@ -2,19 +2,21 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Noticias - Turismo Mar Del Plata</title>
     <meta name="description" content="Noticias y novedades sobre turismo en Mar Del Plata">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
     <header id="encabezado" class="hero">
         <h1>Noticias de Mar Del Plata</h1>
         <h2>Enterate de las últimas novedades antes de viajar</h2>
-        <nav>
+        <nav aria-label="Menú principal">
             <a href="index.html">Inicio</a>
             <a href="ciudad.html">Ciudad</a>
             <a href="lugares.html">Lugares</a>
@@ -22,54 +24,74 @@
             <a href="contacto.html">Contacto</a>
         </nav>
     </header>
+
     <main>
         <section id="introduccion">
             <h2>Mantenete informado</h2>
             <p>Antes de viajar es importante conocer las <strong>últimas novedades</strong> de la ciudad: eventos, cambios climáticos, cortes de calles o actividades especiales de temporada. Aquí reunimos las noticias más relevantes para que tu visita sea la mejor posible. <a class="enlace-salto" href="#listado">Ir directo a las noticias</a></p>
-            <img src="https://picsum.photos/id/28/1400/400" alt="Vista de la ciudad de Mar del Plata">
+            <img src="img/costanera-mar-del-plata.jpg" class="img-fluid" alt="Costanera de Mar del Plata con la playa y el mar al fondo">
         </section>
 
         <section id="listado">
             <h2>Últimas noticias</h2>
 
-            <article>
-                <div class="noticia-encabezado">
-                    <time datetime="2026-09-01">01 de septiembre de 2026</time>
-                    <h3>Comienza la temporada de verano 2026</h3>
-                </div>
-                <p>La ciudad se prepara para recibir a miles de turistas con nuevas propuestas gastronómicas y culturales a lo largo de toda la costa.</p>
-            </article>
+            <div class="container px-0">
+                <div class="row g-4">
 
-            <article>
-                <div class="noticia-encabezado">
-                    <time datetime="2026-08-20">20 de agosto de 2026</time>
-                    <h3>Nuevo circuito de bicisendas en la costanera</h3>
+                <div class="col-12 col-md-6">
+                    <article class="card h-100">
+                        <img src="img/alerta-viento.jpg" class="card-img-top" loading="lazy" alt="Olas y viento fuerte en la costa marplatense">
+                        <div class="card-body">
+                            <p class="mb-2"><span class="badge bg-primary"><time datetime="2026-09-08">08 de septiembre de 2026</time></span></p>
+                            <h3 class="card-title h5">Recomendaciones ante alerta de vientos fuertes</h3>
+                            <p class="card-text">Se recomienda a los turistas revisar el <a href="https://www.meteored.com.ar/tiempo-en_Mar+del+Plata-America+Sur-Argentina-Provincia+de+Buenos+Aires-SAZM-1-16931.html" target="_blank" rel="noopener noreferrer">pronóstico del clima</a> antes de realizar actividades al aire libre.</p>
+                        </div>
+                    </article>
                 </div>
-                <p>El municipio inauguró un nuevo tramo de bicisendas que conecta el centro con los balnearios del sur, ideal para recorrer la ciudad de forma sustentable.</p>
-            </article>
 
-            <article>
-                <div class="noticia-encabezado">
-                    <time datetime="2026-09-05">05 de septiembre de 2026</time>
-                    <h3>Agenda cultural de septiembre</h3>
+                <div class="col-12 col-md-6">
+                    <article class="card h-100">
+                        <img src="img/teatro-auditorium.jpg" class="card-img-top" loading="lazy" alt="Fachada del teatro con la agenda cultural de septiembre">
+                        <div class="card-body">
+                            <p class="mb-2"><span class="badge bg-primary"><time datetime="2026-09-05">05 de septiembre de 2026</time></span></p>
+                            <h3 class="card-title h5">Agenda cultural de septiembre</h3>
+                            <p class="card-text">Se anunciaron nuevas fechas de recitales y obras de teatro. <a href="contacto.html">Consultá cómo conseguir entradas</a>.</p>
+                        </div>
+                    </article>
                 </div>
-                <p>Se anunciaron nuevas fechas de recitales y obras de teatro. <a href="contacto.html">Consultá cómo conseguir entradas</a>.</p>
-            </article>
 
-            <article>
-                <div class="noticia-encabezado">
-                    <time datetime="2026-09-08">08 de septiembre de 2026</time>
-                    <h3>Recomendaciones ante alerta de vientos fuertes</h3>
+                <div class="col-12 col-md-6">
+                    <article class="card h-100">
+                        <img src="img/playa-verano.jpg" class="card-img-top" loading="lazy" alt="Playa de Mar del Plata llena de gente en verano">
+                        <div class="card-body">
+                            <p class="mb-2"><span class="badge bg-primary"><time datetime="2026-09-01">01 de septiembre de 2026</time></span></p>
+                            <h3 class="card-title h5">Comienza la temporada de verano 2026</h3>
+                            <p class="card-text">La ciudad se prepara para recibir a miles de turistas con nuevas propuestas gastronómicas y culturales a lo largo de toda la costa.</p>
+                        </div>
+                    </article>
                 </div>
-                <p>Se recomienda a los turistas revisar el <a href="https://www.meteored.com.ar/tiempo-en_Mar+del+Plata-America+Sur-Argentina-Provincia+de+Buenos+Aires-SAZM-1-16931.html" target="_blank" rel="noopener noreferrer">pronóstico del clima</a> antes de realizar actividades al aire libre.</p>
-            </article>
+
+                <div class="col-12 col-md-6">
+                    <article class="card h-100">
+                        <img src="img/bicisenda-costanera.jpg" class="card-img-top" loading="lazy" alt="Bicisenda sobre la costanera con ciclistas">
+                        <div class="card-body">
+                            <p class="mb-2"><span class="badge bg-primary"><time datetime="2026-08-20">20 de agosto de 2026</time></span></p>
+                            <h3 class="card-title h5">Nuevo circuito de bicisendas en la costanera</h3>
+                            <p class="card-text">El municipio inauguró un nuevo tramo de bicisendas que conecta el centro con los balnearios del sur, ideal para recorrer la ciudad de forma sustentable.</p>
+                        </div>
+                    </article>
+                </div>
+                </div>
+            </div>
         </section>
 
-        <aside id="suscripcion">
+        <aside id="suscripcion" class="alert alert-info text-center" role="alert">
             <h2>No te pierdas ninguna novedad</h2>
-            <p>Podés recibir las noticias directamente en tu email ingresando <a href="contacto.html#sugerencias">acá</a>.</p>
+            <p>Podés recibir las noticias directamente en tu email completando el formulario de contacto.</p>
+            <a href="contacto.html#sugerencias" class="btn btn-primary">Ir al formulario</a>
         </aside>
     </main>
+
     <footer id="PieDePagina">
         <p>&copy; 2026 Turismo Mar del Plata - Todos los derechos reservados.</p>
         <address>
