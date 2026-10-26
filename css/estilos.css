@@ -1,16 +1,24 @@
-/*Estlos index.html*/
+/*Estlos index.html ------>JORGE*/
 :root {
+
+    /*VARIABLE PARA FUENTE*/
     --fuente:"Roboto";
+
+    /*VARIABLES IDENTIDAD VISUAL*/
     --color-primario: #028090;
     --color-secundario:#1A2B4A;
+
+    /*VARIABLE PARA FONDOS*/
     --color-fondo:#F7F9FA;
     --color-footer:#333333;
-    --color-header-aside:#f0f4f8;
+
+    /*VARIABLE PARA TEXTOS*/
     --color-text-footer-nav:#ffffff;
+
+    /*VARIABLE PARA BORDES*/
     --color-borde: #cbd5e1;
     --color-borde-suave: #e2e8f0;
-    --color-borde-claro: #e0e0e0;
-    
+     
    }
 /*Estilos generales*/
 * {
@@ -53,7 +61,7 @@ h3 {
 }
 /*header y barra de navegacion*/
 header {
-    background-color: var(--color-header-aside);
+    background-color: var(--color-fondo);
     padding:2rem 1rem;
     text-align: center;
     margin-bottom: 1rem;
@@ -75,6 +83,22 @@ header {
     max-width: 700px;
     margin: 0 auto 1rem auto;
 }
+
+/*menu hamburguesa con bootstrap*/
+
+.navbar{
+    
+    justify-content: center ; 
+    align-items: center;
+    background-color: var(--color-secundario) !important; 
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;           
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/*ex menu con flexbox (para el index.html) queda en el resto*/
+
 nav{
     display: flex;
     justify-content: space-evenly; 
@@ -124,7 +148,7 @@ a:hover {
 }
 
 .card {
-    border: 1px solid var(--color-borde-claro);
+    border: 1px solid var(--color-borde-suave);
     border-radius: 8px;
     box-shadow: 0 4px 6px var(--color-footer); 
 }
@@ -133,7 +157,7 @@ a:hover {
 
 .enlace-salto {
     display: inline-block;
-    background-color:var(--color-header-aside);
+    background-color:var(--color-fondo);
     color: var(--color-primario);
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
@@ -186,7 +210,7 @@ footer {
     background-color: var(--color-text-footer-nav);
     padding: 1.5rem;
     border-radius: 8px;
-    border: 1px solid var(--color-borde-claro);
+    border: 1px solid var(--color-borde-suave);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -216,7 +240,7 @@ footer {
 /*contenido aside soobreescribiendo bootstrap*/
 
 #consejos {
-    background-color:var(--color-header-aside);            
+    background-color:var(--color-fondo);            
     border-left: 5px solid var(--color-primario); 
                  
   }
@@ -245,7 +269,7 @@ footer {
 
 /* Estilos del Menú Lateral */
 .menu-lateral {
-    background-color: var(--color-header-aside);
+    background-color: var(--color-fondo);
     padding: 20px;
     border-radius: 8px;
     border: 1px solid var(--color-borde-suave);
@@ -287,9 +311,7 @@ footer {
 }
 
 
-
 /*==================== grid y estilos gastronomia ==========================*/
-
 
 
 .seccion-gastronomia {
@@ -310,7 +332,7 @@ footer {
     flex-direction: column;
     gap: 15px; /* Espacio entre la tarjeta grande de arriba y los platos de abajo */
     background: var(--color-text-footer-nav);
-    border: 1px solid var(--color-borde-claro);
+    border: 1px solid var(--color-borde-suave);
     border-radius: 12px;
     padding: 20px;
     box-shadow: 0 4px 6px var(--color-footer);
@@ -321,7 +343,7 @@ footer {
 .item-principal {
     flex: 1;
     background: var(--color-text-footer-nav);
-    border: 1px solid var(--color-borde-claro);
+    border: 1px solid var(--color-borde-suave);
     border-radius: 8px;
     overflow: hidden;
     display: flex;
@@ -350,7 +372,7 @@ footer {
 .item-chico {
     flex: 1; /* Hace que ambas tarjetas chicas compartan exactamente el 50% del ancho */
     background: var(--color-text-footer-nav);
-    border: 1px solid var(--color-borde-claro);
+    border: 1px solid var(--color-borde-suave);
     border-radius: 8px;
     padding: 12px;
     display: flex;
@@ -411,7 +433,7 @@ footer {
 #suscripcion {
     max-width: 800px;
     margin: 0 auto 3rem auto;
-    background-color: var(--color-header-aside);
+    background-color: var(--color-fondo);
     border-left: 5px solid var(--color-primario);
 }
 

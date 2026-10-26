@@ -19,22 +19,46 @@
     
     <!-- ================= LINK ESTILOS ================= -->
     <link rel="stylesheet" href="css/estilos.css">
-
 </head>
 <body>
-
     <!-- ================= ENCABEZADO Y NAV PRINCIPAL ================= -->
-
-
-    <header id="encabezado" class="hero">   
+<header id="encabezado" class="hero">  
+        
+        
 <h1>Planificá tus próximas vacaciones en Mar Del Plata</h1>
 <h2>Mirá todos los planes para hacer en la feliz en un solo lugar.</h2>
-<nav aria-label="Menú principal">
-    <a href="index.html">Inicio</a>
-    <a href="ciudad.html">Ciudad</a>
-    <a href="lugares.html">Lugares</a>
-    <a href="noticias.html">Noticias</a>
-    <a href="contacto.html">Contacto</a>
+
+<!-- ================= NAV PRINCIPAL HAMBURGUESA BS================= -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Menú principal">
+    <div class="container"> 
+
+        <a class="navbar-brand fw-bold" href="index.html">Turismo MDQ</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+
+            <ul class="navbar-nav w-100 justify-content-evenly">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="ciudad.html">Ciudad</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="lugares.html">Lugares</a>
+                </li>
+                    <li class="nav-item" class="nav-item">
+                <a class="nav-link active" href="noticias.html">Noticias</a>
+                </li>
+                <li class="nav-item" class="nav-item">
+                    <a class="nav-link active" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </div>
 </nav>
 </header>
 
@@ -77,7 +101,7 @@
         
         <section >
             <h2 id="titulo-resumen" >Los mas destacados</h2>
-         <!-- ============================== TARJETAS HISTORIA  =============================== -->
+         <!-- =========================== TARJETAS HISTORIA  ============================ -->
             <div id="resumen">
                 <article>
                     <h3>Historia de la ciudad</h3>
@@ -90,7 +114,7 @@
                 </article>
 
                 
-            <!-- ============================== TARJETA ACTIVIDADES  =============================== -->
+            <!-- ========================== TARJETA ACTIVIDADES  ======================== -->
                 <article>
                     <h3>Actividades</h3>
                     <p>Conocé cuáles son las playas mas lindas, y que actividades ofrece cada una <a href="lugares.html">con un click.</a> </p>
@@ -102,7 +126,7 @@
                     <img src="https://picsum.photos/id/121/1400/500" alt="paseos en bote">
                 </article>
 
-                <!-- ============================== TARJETAS CULKTURA  =============================== -->
+                <!-- ========================= TARJETAS CULKTURA  ========================= -->
 
                 <article>
                     <h3>Cultural</h3>
@@ -122,12 +146,12 @@
          <!-- ==========================================  GASTRONOMIA ================================================== -->
         <section id="gastronomia" class="seccion-gastronomia">
 
-                                        <!--==========  BADGE BOOTSTRAP ======== -->
+                                        <!--==========  BADGE BOOTSTRAP EN EL TITULO ======== -->
             <h2>Gastronomía Destacada<span class="badge bg-primary">¡Nuevo!</span></h2>
             
             <div class="contenedor-bloques">
                 
-                <!-- ============================ BLOQUE 1 GRANDE DEL LOCAL ============================ -->
+                <!-- ========================= BLOQUE 1 GRANDE DEL LOCAL ======================== -->
                 <div class="bloque-local">
                     
                     <article class="item-principal">
