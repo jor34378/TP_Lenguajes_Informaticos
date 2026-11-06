@@ -32,3 +32,13 @@ document.addEventListener("DOMContentLoaded", function () {
     buscador.addEventListener("input", filtrar);
     filtrar();
 });
+
+// Jorge Modo Oscuro
+
+const btnModo = document.getElementById("btn-modo");
+btnModo.addEventListener("click", () => {
+    document.body.classList.toggle("modo-oscuro");
+    // Cambiar el texto del botón según el estado actual
+    const modoActivo = document.body.classList.contains("modo-oscuro");
+    btnModo.textContent = modoActivo ? "☀ Modo claro" : "🌙 Modo oscuro";
+});

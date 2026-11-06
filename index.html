@@ -20,64 +20,68 @@
     <!-- ================= LINK ESTILOS ================= -->
     <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body>
+<body class="layout">
+   
     <!-- ================= ENCABEZADO Y NAV PRINCIPAL ================= -->
-<header id="encabezado" class="hero">  
-        
-        
-<h1>Planificá tus próximas vacaciones en Mar Del Plata</h1>
-<h2>Mirá todos los planes para hacer en la feliz en un solo lugar.</h2>
+<header id="encabezado" class="hero">         
+<!--=============MODO OSCURO JS ============--> 
+    <button id="btn-modo" class="btn btn-outline-secondary btn-sm">
+        🌙 Modo oscuro
+    </button>
+    <h1>Planificá tus próximas vacaciones en Mar Del Plata</h1>
+    <h2>Mirá todos los planes para hacer en la feliz en un solo lugar.</h2>
 
-<!-- ================= NAV PRINCIPAL HAMBURGUESA BS================= -->
-<nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Menú principal">
-    <div class="container"> 
+    <!-- ================= NAV PRINCIPAL HAMBURGUESA BS================= -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark" aria-label="Menú principal">
+        <div class="container"> 
 
-        <a class="navbar-brand fw-bold" href="index.html">Turismo MDQ</a>
+            <a class="navbar-brand fw-bold" href="index.html">Turismo MDQ</a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navMenu">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
 
-            <ul class="navbar-nav w-100 justify-content-evenly">
+                <ul class="navbar-nav w-100 justify-content-evenly">
 
-                <li class="nav-item">
-                    <a class="nav-link active" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="ciudad.html">Ciudad</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="lugares.html">Lugares</a>
-                </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="ciudad.html">Ciudad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="lugares.html">Lugares</a>
+                    </li>
+                        <li class="nav-item" class="nav-item">
+                    <a class="nav-link active" href="noticias.html">Noticias</a>
+                    </li>
                     <li class="nav-item" class="nav-item">
-                <a class="nav-link active" href="noticias.html">Noticias</a>
-                </li>
-                <li class="nav-item" class="nav-item">
-                    <a class="nav-link active" href="contacto.html">Contacto</a>
-                </li>
-            </ul>
+                        <a class="nav-link active" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
+
 </header>
-
-<main class="layout-principal">
-
-    <!-- ================= NAV LATERAL ================= -->
+  <!-- ================= NAV LATERAL ================= -->
 
 
-        <aside class="menu-lateral" aria-label="Menú de navegación interna">
-            <h3>Información de Intéres</h3>
-            <ul>
-                <li><a href="#encabezado">Menú principal</a></li>
-                <li><a href="#introduccion">Bienvenidos</a></li>
-                <li><a href="#titulo-resumen">Destacados</a></li>
-                <li><a href="#gastronomia">Gastronomía</a></li>
-                <li><a href="#alojamientos">Alojamientos</a></li>
-                <li><a href="#consejos">Consejos Útiles</a></li>
-            </ul>
-        </aside>
+  <aside class="menu-lateral" aria-label="Menú de navegación interna">
+    <h3>Información de Intéres</h3>
+    <ul>
+        <li><a href="#encabezado">Menú principal</a></li>
+        <li><a href="#introduccion">Bienvenidos</a></li>
+        <li><a href="#titulo-resumen">Destacados</a></li>
+        <li><a href="#gastronomia">Gastronomía</a></li>
+        <li><a href="#alojamientos">Alojamientos</a></li>
+        <li><a href="#consejos">Consejos Útiles</a></li>
+    </ul>
+</aside>
+<main>
+
+  
 
      <!-- ================= CONTENIDO INTRO ================= -->   
 
@@ -91,7 +95,7 @@
 
             <p>No te pierdas nuestras  <a href="#titulo-resumen"  class="enlace-salto"><em>propuestas</em></a></p>
             <div class="banner">
-                <img src="https://picsum.photos/id/12/1400/400" alt="Panoramica de la playa">
+                <img src="img/banner.jpg" alt="Panoramica de la playa">
             </div>
         </section>
 
@@ -103,19 +107,19 @@
             <h2 id="titulo-resumen" >Los mas destacados</h2>
          <!-- =========================== TARJETAS HISTORIA  ============================ -->
             <div id="resumen">
-                <article>
+                <article class="card">
                     <h3>Historia de la ciudad</h3>
                     <p>Mar del Plata, apodada "La Ciudad Feliz", evolucionó de un pequeño
                         establecimiento saladeril a convertirse en el principal balneario y
                         puerto pesquero de Argentina.<br><a href="ciudad.html">Conocé más de la feliz.</a></p>
                     
                         
-                        <img src="https://picsum.photos/id/120/1400/500" alt="paseos en bote">
+                        <img src="img/costanera-mar-del-plata.jpg" alt="paseos en bote">
                 </article>
 
                 
             <!-- ========================== TARJETA ACTIVIDADES  ======================== -->
-                <article>
+                <article class="card">
                     <h3>Actividades</h3>
                     <p>Conocé cuáles son las playas mas lindas, y que actividades ofrece cada una <a href="lugares.html">con un click.</a> </p>
                     <ul>
@@ -123,12 +127,12 @@
                         <li>Clases de surf</li>
                         <li>Paseos por el bosque</li>
                     </ul>
-                    <img src="https://picsum.photos/id/121/1400/500" alt="paseos en bote">
+                    <img src="img/surf.jpg" alt="paseos en bote">
                 </article>
 
                 <!-- ========================= TARJETAS CULKTURA  ========================= -->
 
-                <article>
+                <article class="card">
                     <h3>Cultural</h3>
                     
                     <p>Accede a descuentos y entradas gratuitas de la siguiente manera</p> 
@@ -138,7 +142,7 @@
                         <li>Elegí el evento que este disponible</li>
                         <li>Chequea tu email para ver los tickets</li>
                     </ol>
-                    <img src="https://picsum.photos/id/122/1400/500" alt="paseos en bote">
+                    <img src="img/cultura.jpg" alt="paseos en bote">
                 </article>
             </div>
         </section>
@@ -155,9 +159,9 @@
                 <div class="bloque-local">
                     
                     <article class="item-principal">
-                        <img src="https://picsum.photos/id/130/1400/500" alt="Puerto de Marisco">
+                        <img src="img/resto-chicharra.jpg" alt="Puerto de Marisco">
                         <div class="info-principal">
-                            <h3>Puerto de Marisco</h3>
+                            <h3>Chicharra</h3>
                             <p>El clásico sabor marplatense con pescados frescos del día.</p>
                         </div>
                     </article>
@@ -166,12 +170,12 @@
 
                     <div class="platos-inferiores">
                         <article class="item-chico">
-                            <img src="https://picsum.photos/id/129/1400/500" alt="Cazuela de Mariscos">
+                            <img src="img/mariscos.jpg" alt="Cazuela de Mariscos">
                             <h4>Cazuela de Mariscos</h4>
                         </article>
 
                         <article class="item-chico">
-                            <img src="https://picsum.photos/id/128/1400/500" alt="Rabas Crocantes">
+                            <img src="img/rabas.jpg" alt="Rabas Crocantes">
                             <h4>Rabas Crocantes</h4>
                         </article>
                     </div>
@@ -182,9 +186,9 @@
                 <div class="bloque-local">
                     
                     <article class="item-principal">
-                        <img src="https://picsum.photos/id/127/1400/500" alt="Café de la Costa">
+                        <img src="img/resto-franciele.jpg" alt="Café de la Costa">
                         <div class="info-principal">
-                            <h3>Café de la Costa</h3>
+                            <h3>Francielle</h3>
                             <p>Especialidad en churros y desayunos frente al mar.</p>
                         </div>
                     </article>
@@ -193,11 +197,11 @@
 
                     <div class="platos-inferiores">
                         <article class="item-chico">
-                            <img src="https://picsum.photos/id/126/1400/500" alt="Churros Rellenos">
+                            <img src="img/churros.jpg" alt="Churros Rellenos">
                             <h4>Churros Rellenos</h4>
                         </article>
                         <article class="item-chico">
-                            <img src="https://picsum.photos/id/125/1400/500" alt="Café Doble">
+                            <img src="img/cafe.jpg" alt="Café Doble">
                             <h4>Café Doble</h4>
                         </article>
                     </div>
@@ -208,7 +212,7 @@
 
         <!-- ================= ALOJAMIENTOS BOOTSTRAP ================= -->
         
-<section id="alojamientos" class="my-5">
+<section class="my-5">
     <h2>Alojamientos Recomendados <span class="badge bg-primary">¡Destacado!</span></h2>
     
     <div class="container px-0">
@@ -217,7 +221,7 @@
             <!-- ================= HOTEL 1 ================= -->
             <div class="col-12 col-md-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="https://picsum.photos/id/237/600/400" class="card-img-top" alt="Hotel Costa Galana">
+                    <img src="img/hotel-1.jpg" class="card-img-top" alt="Hotel Costa Galana">
                     <div class="card-body d-flex flex-column justify-content-between">
                         <div>
                             <h5 class="card-title">Hotel Costa Galana</h5>
@@ -231,10 +235,10 @@
             <!-- ================= HOTEL 2 ================= -->
             <div class="col-12 col-md-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="https://picsum.photos/id/28/600/400" class="card-img-top" alt="Hotel Provincial">
+                    <img src="img/hotel-2.jpg" class="card-img-top" alt="Hotel Provincial">
                     <div class="card-body d-flex flex-column justify-content-between">
                         <div>
-                            <h5 class="card-title">NH Gran Hotel Provincial</h5>
+                            <h5 class="card-title">Hotel Dos Reyes</h5>
                             <p class="card-text">Un clásico histórico de Mar del Plata ubicado en pleno centro de la Rambla.</p>
                         </div>
                         <a href="contacto.html" class="btn btn-primary mt-3">Consultar tarifas</a>
@@ -245,7 +249,7 @@
             <!-- ================= HOTEL 3 ================= -->
             <div class="col-12 col-md-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="https://picsum.photos/id/29/600/400" class="card-img-top" alt="Apart Hotel Mar del Plata">
+                    <img src="img/hotel-3.jpg" class="card-img-top" alt="Apart Hotel Mar del Plata">
                     <div class="card-body d-flex flex-column justify-content-between">
                         <div>
                             <h5 class="card-title">Apart Sol y Mar</h5>
