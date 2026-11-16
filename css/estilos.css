@@ -460,7 +460,6 @@ body.modo-oscuro .card {
     object-fit: cover;
 }
 
-/* anula el margin-left global de .badge */
 #listado .badge {
     margin-left: 0;
 }
@@ -469,7 +468,6 @@ body.modo-oscuro .card {
     font-size: 1.05rem;
 }
 
-/* alert de Bootstrap con la paleta del sitio */
 #suscripcion {
     max-width: 800px;
     margin: 0 auto 3rem auto;
@@ -479,6 +477,23 @@ body.modo-oscuro .card {
 
 #suscripcion h2 {
     margin-bottom: 0.5rem;
+}
+
+
+.pagina-noticias .navbar {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.pagina-noticias .navbar .navbar-brand {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.pagina-noticias .imagen-intro {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
 }
 
 
