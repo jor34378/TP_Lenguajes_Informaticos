@@ -266,6 +266,7 @@ footer {
     grid-template-rows: auto 1fr auto;
     gap: 1rem;
     
+    
     /*mapa de como se ve*/
     grid-template-areas:
     "header header"
@@ -275,10 +276,10 @@ footer {
 
 /*ubicar elementos*/
 
-header { grid-area: header; }
-nav    { grid-area: nav; }
-main   { grid-area: main; }
-footer { grid-area: footer; }
+header           { grid-area: header; }
+.menu-lateral    { grid-area: nav; }
+main             { grid-area: main; }
+footer           { grid-area: footer; }
 
 
 /* Estilos del Menú Lateral */
@@ -288,9 +289,12 @@ footer { grid-area: footer; }
     padding: 20px;
     border-radius: 8px;
     border: 1px solid var(--color-borde-suave);
-    align-self: start; /* Para que no se estire raro hacia abajo */
+    align-self: start;
     position: sticky;
     top: 20px; 
+
+
+
 }
 
 .menu-lateral    a {
@@ -430,6 +434,7 @@ body.modo-oscuro .card {
     background-color: var(--color-modo-oscuro) !important;
     color: var(--color-text-footer-nav) !important;
     border: 1px solid var(--color-footer) !important;
+    
 }
 
 
