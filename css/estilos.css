@@ -586,7 +586,7 @@ footer a:hover {
 
 /*Acoplamiento Modo Oscuro -Santy*/
 body.modo-oscuro .card {
-    barckground-color: #141414;
+    background-color: #141414;
     color: #ffffff;
     border-color: #333333;
 }
