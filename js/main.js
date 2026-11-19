@@ -38,9 +38,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Jorge Modo Oscuro
 
-const btnModo = document.getElementById("btn-modo");
+/*const btnModo = document.getElementById("btn-modo");
 btnModo.addEventListener("click", () => {
     document.body.classList.toggle("modo-oscuro");
     const modoActivo = document.body.classList.contains("modo-oscuro");
     btnModo.textContent = modoActivo ? "☀ Modo claro" : "🌙";
-});
+});*/
+
+const btnModoOscuro = document.querySelector('#btn-modo');
+
+function actualizarBoton(activado) {
+  if (!btnModoOscuro) return;
+  btnModoOscuro.textContent = activado ? '☀ Modo claro' : '🌙';
+}
+
+// Sincroniza el texto del botón al entrar a cada página
+const estaGuardado = localStorage.getItem('modoOscuro') === 'activado';
+if (estaGuardado) {
+  document.body.classList.add('modo-oscuro');
+  document.documentElement.classList.add('modo-oscuro');
+}
+actualizarBoton(estaGuardado);
+
+if (btnModoOscuro) {
+  btnModoOscuro.addEventListener('click', () => {
+    document.body.classList.toggle('modo-oscuro');
+    const estaActivado = document.body.classList.contains('modo-oscuro');
+    document.documentElement.classList.toggle('modo-oscuro', estaActivado);
+    localStorage.setItem('modoOscuro', estaActivado ? 'activado' : 'desactivado');
+    actualizarBoton(estaActivado);
+  });
+}
