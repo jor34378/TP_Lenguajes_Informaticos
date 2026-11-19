@@ -292,15 +292,6 @@ footer           { grid-area: footer; }
     align-self: start;
     position: sticky;
     top: 20px; 
-
-
-
-}
-
-.menu-lateral    a {
-    display: block;      
-    padding-left: 10px;  
-    border-radius: 4px;   
 }
 
 .menu-lateral h3 {
@@ -329,6 +320,8 @@ footer           { grid-area: footer; }
     font-weight: bold;
     display: block;
     transition: color 0.2s;
+    padding-left: 10px;  
+    border-radius: 4px; 
 }
 .menu-lateral a:hover {
     background-color: var(--color-primario);
