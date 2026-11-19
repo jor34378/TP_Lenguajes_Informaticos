@@ -36,11 +36,50 @@ document.addEventListener("DOMContentLoaded", function () {
     filtrar();
 });
 
-// Jorge Modo Oscuro
+// =====================================================
+// MODO OSCURO - compartido por todas las paginas
+// =====================================================
+// - La eleccion se guarda en el navegador (localStorage) y se aplica en cada pagina.
+// - Funciona tambien en las paginas que todavia no tienen el boton.
+// - El boton es accesible: aria-pressed indica si el modo oscuro esta activo.
 
+const CLAVE_TEMA = "tema";
 const btnModo = document.getElementById("btn-modo");
-btnModo.addEventListener("click", () => {
-    document.body.classList.toggle("modo-oscuro");
-    const modoActivo = document.body.classList.contains("modo-oscuro");
-    btnModo.textContent = modoActivo ? "☀ Modo claro" : "🌙";
-});
+
+// localStorage puede estar bloqueado (modo privado): en ese caso se ignora sin romper la pagina
+function leerTema() {
+    try {
+        return localStorage.getItem(CLAVE_TEMA);
+    } catch (error) {
+        return null;
+    }
+}
+
+function guardarTema(valor) {
+    try {
+        localStorage.setItem(CLAVE_TEMA, valor);
+    } catch (error) {
+        // sin almacenamiento: el modo vale solo para esta pagina
+    }
+}
+
+// Unico lugar donde se cambia el aspecto de la pagina
+function aplicarTema(oscuro) {
+    document.body.classList.toggle("modo-oscuro", oscuro);
+    if (btnModo) {
+        btnModo.textContent = oscuro ? "☀️" : "🌙";
+        btnModo.setAttribute("aria-pressed", String(oscuro));
+    }
+}
+
+// Al cargar: aplica lo que se eligio la ultima vez
+aplicarTema(leerTema() === "oscuro");
+
+// Al hacer clic: cambia, aplica y guarda
+if (btnModo) {
+    btnModo.addEventListener("click", function () {
+        const oscuro = !document.body.classList.contains("modo-oscuro");
+        aplicarTema(oscuro);
+        guardarTema(oscuro ? "oscuro" : "claro");
+    });
+}
