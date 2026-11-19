@@ -1,4 +1,7 @@
-//Noticias - Ema 
+// ===================================
+// NOTICIAS - BUSCADOR (Ema)
+// ===================================
+
 document.addEventListener("DOMContentLoaded", function () {
     const buscador = document.getElementById("buscador-noticias");
     const contador = document.getElementById("contador-noticias");
@@ -38,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function () {
 const btnModo = document.getElementById("btn-modo");
 btnModo.addEventListener("click", () => {
     document.body.classList.toggle("modo-oscuro");
-    // Cambiar el texto del botón según el estado actual
     const modoActivo = document.body.classList.contains("modo-oscuro");
-    btnModo.textContent = modoActivo ? "☀ Modo claro" : "🌙 Modo oscuro";
+    btnModo.textContent = modoActivo ? "☀ Modo claro" : "🌙";
 });
