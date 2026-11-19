@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
+
     <!-- ================= MODO OSCURO PARA TODAS LAS PAGINAS ================= -->
     <script>
         if (localStorage.getItem('modoOscuro') === 'activado') {
@@ -62,10 +62,10 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="lugares.html">Lugares</a>
                     </li>
-                        <li class="nav-item" class="nav-item">
+                        <li class="nav-item">
                     <a class="nav-link active" href="noticias.html">Noticias</a>
                     </li>
-                    <li class="nav-item" class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link active" href="contacto.html">Contacto</a>
                     </li>
                 </ul>
@@ -77,16 +77,25 @@
   <!-- ================= NAV LATERAL ================= -->
 
 
-  <aside class="menu-lateral" aria-label="Menú de navegación interna">
-    <h3>Información de Intéres</h3>
-    <ul>
-        <li><a href="#encabezado">Menú principal</a></li>
-        <li><a href="#introduccion">Bienvenidos</a></li>
-        <li><a href="#titulo-resumen">Destacados</a></li>
-        <li><a href="#gastronomia">Gastronomía</a></li>
-        <li><a href="#alojamientos">Alojamientos</a></li>
-        <li><a href="#consejos">Consejos Útiles</a></li>
-    </ul>
+  <aside class="menu-lateral navbar navbar-expand-md flex-column align-items-stretch navbar-light" aria-label="Menú de navegación interna">
+    <div class="container">
+        
+        <button class=" btn-lateral navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenuLateral">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenuLateral">
+            <h3>Información de Intéres</h3>
+            <ul class="navbar-nav flex-column w-100">
+                <li class="nav-item"><a class="nav-link active" href="#encabezado">Menú principal</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#introduccion">Bienvenidos</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#titulo-resumen">Destacados</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#gastronomia">Gastronomía</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#alojamientos">Alojamientos</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#consejos">Consejos Útiles</a></li>
+            </ul>
+        </div>
+    </div>
+
 </aside>
 <main>
 
