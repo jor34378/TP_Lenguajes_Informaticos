@@ -536,43 +536,34 @@ textarea {
     border-radius: 4px;
     padding: 10px;
     width: 100%;
-    box-sizing: border-box; /* evita que se desborde el ancho (padding)*/
     transition: border-color 0.2s ease-in-out;
 }
 
 /*Estilos EXCLUSIVOS para el textarea*/
-
 textarea {
     resize: vertical; /* permite estirar la caja solo hacia abajo */
     min-height: 100px;
 }
 
-
-
-/* 1. Contenedor principal del footer (Aplico el Flexbox) */
-footer {
-    background-color: var(--color-footer); 
-    color: var(--color-text-footer-nav);            
-    padding: 1.5rem;
-    /* Reglas flexbox: */
-    display: flex; 
-    flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si no caben */
-    justify-content: space-evenly; /* Reparte el espacio uniforme entre los 3 bloques*/
-    gap: 2rem; /* Espacio entre los elementos del footer */
-}
-
-/* 2. Limpieza de listas dentro del footer, quita las viñetas y el padding*/
-footer ul {
-    list-style: none; 
-    padding: 0;
-}
-
-/* 3. Enlaces en reposo y al pasar el mouse */
-footer a {
-    color: var(--color-text-footer-nav);
-    text-decoration: none;
-
-}
+/*Efecto Hover en los enlaces del footer*/
 footer a:hover {
     text-decoration: underline;
 }
+
+/*Acoplamiento Modo Oscuro -Santy*/
+body.modo-oscuro .formulario-container {
+    background-color: var(--color-modo-oscuro);
+    color: var(--color-text-footer-nav);
+    border: 1px solid var(--color-footer);
+}
+body.modo-oscuro .form-group label {
+    color: var(--color-text-footer-nav);
+}
+body.modo-oscuro input[type="text"],
+body.modo-oscuro input[type="email"],
+body.modo-oscuro textarea {
+    background-color: var(--color-footer);
+    color: var(--color-text-footer-nav);
+    border-color: var(--color-borde);
+}
+

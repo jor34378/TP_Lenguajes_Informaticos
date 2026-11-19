@@ -69,3 +69,75 @@ if (btnModoOscuro) {
     actualizarBoton(estaActivado);
   });
 }
+
+// ===================================
+// CONTACTO - VALIDACIÓN Y FEEDBACK (Santiago)
+// ===================================
+
+documnent.addEventListener("DOMContentLoaded", () =>{
+    const formContacto = document.getElementById("form-contacto");
+    const inputNombre = document.getElementById("nombre");
+    const inputEmail = document.getElementById("email");
+    const inputMensaje = document.getElementById("mensaje");
+    const checkPrivacidad = document.getElementById("privacidad");
+    const contadorCaracteres = document.getElementById("contador-caracteres");
+    const cajaFeedback = document.getElementById("feedback-contacto");
+    
+    if (!formContacto){
+        return;
+    }
+    //Contador de caracteres
+    if (inputMensaje && contadorCaracteres){
+        inputMensaje.addEventListener("input", () => {
+            const cantidad = inputMensaje.value.length;
+            contadorCaracteres.textContent = `${cantidad} / 300 caracteres`;
+        });
+    }
+    formContacto.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const nombre = inputNombre.value.trim();
+        const email = inputEmail.value.trim();
+        const mensaje = inputMensaje.value.trim();
+
+        if (nombre === "" || mensaje === "") {
+            cajaFeedback.innerHTML = `
+                <div class="alert alert-danger" role="alert">
+                    Por favor, completá tu nombre y tu mensaje antes de enviar.
+                </div>
+            `;
+            return;
+        }
+        if (!email.includes("@") || email.length <= 3) {
+            cajaFeedback.innerHTML = `
+                <div class="alert alert-danger" role="alert">
+                    Ingresá un correo electrónico válido (debe contener @).
+                </div>
+            `;
+            return;
+        }
+        if (!checkPrivacidad.checked) {
+            cajaFeedback.innerHTML = `
+                <div class="alert alert-warning" role="alert">
+                    Debés aceptar la política de privacidad para continuar.
+                </div>
+            `;
+            return;
+        }
+        // Si pasó todas las validaciones, generamos la tarjeta de confirmación dinámica
+        cajaFeedback.innerHTML = `
+            <div class="alert alert-success" role="alert">
+                <h4 class="alert-heading">¡Consulta enviada con éxito, ${nombre}!</h4>
+                <p class="mb-1">Te responderemos a la brevedad a <strong>${email}</strong>.</p>
+                <hr>
+                <p class="mb-0 small"><strong>Tu mensaje:</strong> "${mensaje}"</p>
+            </div>
+        `;
+        // Limpiamos el formulario y reiniciamos el contador
+        formContacto.reset();
+        if (contadorCaracteres) {
+            contadorCaracteres.textContent = "0 / 300 caracteres";
+        }
+    });
+});
+
+        
