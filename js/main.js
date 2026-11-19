@@ -74,7 +74,7 @@ if (btnModoOscuro) {
 // CONTACTO - VALIDACIÓN Y FEEDBACK (Santiago)
 // ===================================
 
-documnent.addEventListener("DOMContentLoaded", () =>{
+document.addEventListener("DOMContentLoaded", () =>{
     const formContacto = document.getElementById("form-contacto");
     const inputNombre = document.getElementById("nombre");
     const inputEmail = document.getElementById("email");
