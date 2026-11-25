@@ -627,3 +627,50 @@ body.modo-oscuro textarea {
 #feedback-contacto {
     overflow-wrap: break-word;
 }
+
+/* ===================================== */
+/* ===== Estilos ciudad.html -Nicolas ===== */
+/* ===================================== */
+
+/* acoplamiento del modo oscuro para la pagina ciudad.html */
+body.modo-oscuro .card {
+    background-color: #141414;
+    color: #ffffff;
+    border-color: #333333;
+}
+body.modo-oscuro .cardtitle {
+    color: #028090;
+}
+body.modo-oscuro .formulario-container {
+    background-color: var(--color-modo-oscuro);
+    color: var(--color-text-footer-nav);
+    border: 1px solid var(--color-footer);
+}
+body.modo-oscuro .form-group label {
+    color: var(--color-text-footer-nav);
+}
+body.modo-oscuro input[type="text"],
+body.modo-oscuro input[type="email"],
+body.modo-oscuro textarea {
+    background-color: var(--color-footer);
+    color: var(--color-text-footer-nav);
+    border-color: var(--color-borde);
+}
+.nav-redes {
+    display: block;
+    background-color: transparent;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+/* Devuelve el color principal del sitio (--color-primario) a los enlaces de redes */
+.nav-redes a {
+    color: var(--color-primario); 
+    padding: 0.25rem 0.5rem;     
+    display: inline-block;
+}
+
+/* Evita que palabras o cadenas muy largas sin espacios desborden la caja de respuesta */
+#feedback-contacto {
+    overflow-wrap: break-word;
+}
